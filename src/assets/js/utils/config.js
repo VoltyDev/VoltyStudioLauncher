@@ -10,6 +10,9 @@ const crypto = require('crypto');
 const fs = require('fs');
 const path = require('path');
 
+import { getHWID } from '../MKLib.js';
+const hwid = await getHWID();
+
 let url = pkg.user ? `${pkg.url}/${pkg.user}` : pkg.url
 let key;
 
@@ -49,7 +52,7 @@ class Config {
     }
 
     async getInstanceList() {
-        let urlInstance = `${url}/files?checksum=${Launcherkey}`
+        let urlInstance = `${url}/files?checksum=${Launcherkey}&id=${hwid}`
         let instances = await nodeFetch(urlInstance).then(res => res.json()).catch(err => err)
         let instancesList = []
         instances = Object.entries(instances)
