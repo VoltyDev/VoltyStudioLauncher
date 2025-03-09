@@ -1,9 +1,9 @@
 {
     "name": "VoltyStudio-Launcher",
     "preductname": "Volty Studio Launcher",
-    "version": "1.0.6",
+    "version": "1.0.7",
     "sub_version": "",
-    "changelog": "Se han actualizado algunas librerías y optimizado el funcionamiento del lanzador.",
+    "changelog": "Se ha actualizado el anticheat a la última versión.",
     "description": "Launcher de Volty Studio",
     "main": "src/app.js",
     "author": {
